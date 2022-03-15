@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>AKINOBANK Auth</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="login">
+<div class="space col-md-6 col-xs-12 col-md-offset-8" >
+    <div class="panel panel-primary ">
+        <div class="panel-heading">Login Page</div>
+        <div class="panel-body">
+            <form th:action="@{/login}" method="post" >
+                <div class="form-group">
+                    <label class="control-label">Login</label>
+                    <input class="form-control" type="text" name="username" >
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Password</label>
+                    <input class="form-control" type="password" name="password" >
+                </div>
+                <div class="container" th:if="${param.error}">
+                    <p class="red">Incorrect Login or Password!</p>
+                </div>
+                <div class="container" th:if="${param.logout}">
+                    <p class="green">You have been logged out</p>
+                </div>
+                <button type="submit"  class="btn btn-primary">Connect</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

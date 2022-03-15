@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8" />
+    <title>Produits</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a th:href="@{/operations}" style="color:#b9e5e9;font-weight:bold;">Home
+                    </a>
+                </li>
+
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a th:text="Logged+' '+as +' '+${#httpServletRequest.remoteUser}" style="color:#b9e5e9;font-weight:bold;">
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{/login?logout}" style="color:#b9e5e9;font-weight:bold;">Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section layout:fragment="content">
+
+</section>
+<footer class="navbar-fixed-bottom">
+    <hr/>
+    <div class="container">
+        <small>
+            @PiggyBank All rights reserved
+        </small>
+    </div>
+</footer>
+</body>
+</html>

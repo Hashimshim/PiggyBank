@@ -1,0 +1,21 @@
+.red{
+    color: #8b1e29;
+
+}
+.green{
+    color: #1c7430;
+
+}
+.space{
+    margin-top: 80px;
+    size: 50px;
+
+}
+.login{
+	margin-left:250px;
+    margin-top: 170px;
+
+}
+body{
+	overflow: hidden;
+}
